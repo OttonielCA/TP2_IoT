@@ -1,4 +1,4 @@
-**# Projet 2: Contrôle Vocal des Feux de Croisement via MQTT**
+**Projet 2 IoT: Contrôle Vocal des Feux de Croisement via MQTT**
 
 Ce projet a pour objectif de vous permettre d’intégrer la reconnaissance vocale pour
 contrôler de manière autonome les feux de croisement dans un système basé sur MQTT. En
