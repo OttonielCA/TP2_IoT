@@ -1,8 +1,9 @@
-# sauvegarde 2h30
+# sauvegarde 18h30
 # Importations des bibliotheques necessaires
 import time
 import RPi.GPIO as GPIO
 import paho.mqtt.client as mqtt
+import publisher_mqtt_RPi as pRPi
 
 GPIO.setwarnings(False)
 
@@ -246,22 +247,27 @@ def on_message(client, userdata, message):
     if message.topic == topic_pieton and message.payload.decode() == "pieton_on":
         mode_pieton = True
         print("Commande 'pieton_on' recue.")
+        pRPi.publish_pieton_command_RPi(client)  # publication mqtt
     elif message.topic == topic_panne:
         if message.payload.decode() == "panne_on" and mode_panne is False:
             mode_panne = True
             print("Commande 'panne_on' recue.")
+            pRPi.publish_panneOn_command_RPi(client)  # publication mqtt
         elif message.payload.decode() == "panne_off" and mode_panne is True:
             mode_panne = False
             print("Commande 'panne_off' recue.")
+            pRPi.publish_panneOff_command_RPi(client)  # publication mqtt
     elif message.topic == topic_urgence:
         if message.payload.decode() == "urgence_direction1" and mode_urgence is False:
             mode_urgence = True
             print("Commande 'urgence_direction1' recue.")
             message_urgence = message.payload.decode()
+            pRPi.publish_urgence1_command_RPi(client)  # publication mqtt
         elif message.payload.decode() == "urgence_direction2" and mode_urgence is False:
             mode_urgence = True
             print("Commande 'urgence_direction2' recue.")
             message_urgence = message.payload.decode()
+            pRPi.publish_urgence2_command_RPi(client)  # publication mqtt
 
 
 # Creation du client mqtt
@@ -420,11 +426,9 @@ try:
             elif mode_urgence:  # Si le mode urgence a ete active, passez directement au mode panne
                 continue
 
-
 except KeyboardInterrupt:
     print("Interruption par l'utilisateur")
 
-finally:  # Nettoyage des GPIO a la fin du programme
-    GPIO.cleanup()
-
+finally:
+    GPIO.cleanup() # Nettoyage des GPIO a la fin du programme
 

@@ -127,7 +127,7 @@ try:
                             print("Mauvaise entree, reesaayer")
                             time.sleep(1)
 
-            # Mode Urgence
+            # Mode Urgence - GOOD
             elif transcribed_text == mot_cles_activation[3].lower():
                 print(f"{transcribed_text}: Mode Urgence Allumer.")
                 urgence = ""

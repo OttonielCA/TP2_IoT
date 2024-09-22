@@ -10,15 +10,15 @@ topic_panne = "mode/panne"
 topic_urgence = "mode/urgence"
 def publish_pieton_command(client):
     client.publish(topic_pieton, "pieton_on")
-    print("Commande 'pieton_on' envoyee.")
+    print("Commande 'pieton_on' envoyee a partir du PC.")
 
 def publish_panne_command(client, command):
     client.publish(topic_panne, command)
-    print(f"Commande '{command}' envoyee.")
+    print(f"Commande '{command}' envoyee a partir du PC.")
 
 def publish_urgence_command(client, command):
     client.publish(topic_urgence, command)
-    print(f"Commande '{command}' envoyee.")
+    print(f"Commande '{command}' envoyee a partir du PC.")
 
 
 # Creer une instance du client
