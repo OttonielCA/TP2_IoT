@@ -116,7 +116,7 @@ def modeUrgence():
             time.sleep(1)
         print("Mode urgence terminer: retour au mode precedent")
         mode_urgence = False
-        # Si la variable jaune est False ou la led verte 2 est allumée
+        # Si la variable jaune est False ou la led verte 2 est allumee
         if not jaune or GPIO.input(led_pins['LED_DIR2_GREEN']) == GPIO.HIGH:
             transition_jaune()  # Effectuer la fonction transition_jaune()
 
@@ -167,7 +167,7 @@ def modePieton():
 
 # Fonction pour effectuer la transition des led du vert au rouge a partir de la led jaune
 def transition_jaune():
-    if GPIO.input(led_pins['LED_DIR2_GREEN']) == GPIO.HIGH:  # si la led verte de la direction 2 est allumée
+    if GPIO.input(led_pins['LED_DIR2_GREEN']) == GPIO.HIGH:  # si la led verte de la direction 2 est allumee
         # Direction 1 : rouge, Direction 2 : transition vert au jaune
         print('transition vert au rouge:')
         print('direction 2: jaune - direction 1: rouge')
@@ -188,7 +188,7 @@ def transition_jaune():
         time.sleep(1)
         print("Retour au mode precedent")
 
-    elif GPIO.input(led_pins['LED_DIR1_GREEN']) == GPIO.HIGH:  # si la led verte de la direction 1 est allumée
+    elif GPIO.input(led_pins['LED_DIR1_GREEN']) == GPIO.HIGH:  # si la led verte de la direction 1 est allumee
         # Direction 1 : rouge, Direction 2 : jaune
         print('transition vert au rouge:')
         print('direction 1: jaune - direction 2: rouge')

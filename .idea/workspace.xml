@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2764cb9b-9489-4413-bfdf-77858f5f5621" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RaspberryPi/publisher_mqtt_RPi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/commandeur_final.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/commandeur_fonction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/commandeur_test_vosk.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/commandeur_test_vosk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/interface_publisher_tkinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/interface_publisher_tkinter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordinateur/commandeur_fonction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordinateur/commandeur_test_vosk.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordinateur/interface_publisher_tkinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ordinateur/subscriber_mqtt_PC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/subscriber_mqtt_PC.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RaspberryPi/controleur_led_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RaspberryPi/controleur_led_main.py" afterDir="false" />
     </list>
@@ -46,6 +45,9 @@
     "Python.etst.executor": "Run",
     "Python.exemple1-pyttsx3.executor": "Run",
     "Python.interface_publisher_tkinter.executor": "Run",
+    "Python.publisher_tkinter_MAIN (1).executor": "Run",
+    "Python.publisher_tkinter_main (1).executor": "Run",
+    "Python.publisher_vosk (1).executor": "Run",
     "Python.subscriber_mqtt_PC.executor": "Run",
     "Python.vosk_example_1.executor": "Run",
     "Python.vosk_example_4.executor": "Run",
@@ -63,8 +65,8 @@
       <recent name="D:\Python\School\BLOC_3\BLOC_3_IoT\TP2_IoT\RaspberryPi" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.subscriber_mqtt_PC">
-    <configuration name="commandeur_test_vosk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.publisher_tkinter_MAIN (1)">
+    <configuration name="publisher_tkinter_MAIN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TP2_IoT" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,7 +79,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ordinateur/commandeur_test_vosk.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,29 +88,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="exemple1-pyttsx3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TP2_IoT" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/OneDrive - Collège Ahuntsic/AEC_2024/BLOC 3/IoT/Cours 9" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/OneDrive - Collège Ahuntsic/AEC_2024/BLOC 3/IoT/Cours 9/exemple1-pyttsx3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="interface_publisher_tkinter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="publisher_tkinter_MAIN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TP2_IoT" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,7 +101,73 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ordinateur/interface_publisher_tkinter.py" />
+      <option name="SCRIPT_NAME" value="D:\Python\School\BLOC_3\BLOC_3_IoT\TP2_IoT\Ordinateur\publisher_tkinter_MAIN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="publisher_tkinter_MAIN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP2_IoT" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ordinateur" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Python\School\BLOC_3\BLOC_3_IoT\TP2_IoT\Ordinateur\publisher_tkinter_MAIN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="publisher_vosk (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP2_IoT" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ordinateur" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="publisher_vosk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TP2_IoT" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ordinateur" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Python\School\BLOC_3\BLOC_3_IoT\TP2_IoT\Ordinateur\publisher_vosk.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,35 +198,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vosk_example_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TP2_IoT" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/OneDrive - Collège Ahuntsic/AEC_2024/BLOC 3/IoT/Cours 7" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/OneDrive - Collège Ahuntsic/AEC_2024/BLOC 3/IoT/Cours 7/vosk_example_4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.publisher_tkinter_MAIN (1)" />
+        <item itemvalue="Python.publisher_vosk (1)" />
+        <item itemvalue="Python.publisher_tkinter_MAIN" />
         <item itemvalue="Python.subscriber_mqtt_PC" />
-        <item itemvalue="Python.exemple1-pyttsx3" />
-        <item itemvalue="Python.interface_publisher_tkinter" />
-        <item itemvalue="Python.commandeur_test_vosk" />
-        <item itemvalue="Python.vosk_example_4" />
+        <item itemvalue="Python.publisher_vosk" />
       </list>
     </recent_temporary>
   </component>
