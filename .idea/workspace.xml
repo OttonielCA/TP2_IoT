@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2764cb9b-9489-4413-bfdf-77858f5f5621" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordinateur/publisher_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/subscriber_mqtt_PC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/subscriber_mqtt_PC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RaspberryPi/interface_subscriber_tkinter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RaspberryPi/publisher_mqtt_RPi.py" beforeDir="false" afterPath="$PROJECT_DIR$/RaspberryPi/publisher_mqtt_RPi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -6,6 +6,7 @@ from publisher_vosk import start_voice_recognition, stop_voice_recognition
 import threading
 import queue
 
+# Variables globales pour gérer l'état de l'application
 val_panne = False
 current_mode = "Mode Normal"
 command_queue = queue.Queue()
@@ -13,9 +14,11 @@ current_window = None
 previous_mode = "Mode Normal"
 emergency_timer = None
 
+# Fonctions pour gérer les différents modes et fenêtres
 def update_status_panel():
     status_label.config(text=f"Mode actuel : {current_mode}")
 
+# Fonction pour activer le mode piéton
 def send_pieton_window():
     global current_mode
     publish_pieton_command(client)
@@ -29,6 +32,7 @@ def send_pieton_window():
     root.after(15000, status_label.destroy)
     root.after(15000, lambda: set_mode("Mode Normal"))
 
+# Fonction pour ouvrir la fenêtre du mode panne
 def open_panne_window():
     global current_mode, val_panne, current_window
     root.withdraw()
@@ -53,6 +57,7 @@ def open_panne_window():
                                     command=lambda: pass_to_emergency(failure_window))
     to_emergency_button.grid(row=0, column=1, padx=20, pady=20)
 
+# Fonction pour sortir du mode panne
 def exit_failure_mode(failure_window):
     global current_mode, current_window
     publish_panne_command(client, "panne_off")
@@ -70,6 +75,7 @@ def exit_failure_mode(failure_window):
 
     root.after(5000, panne_label.destroy)
 
+# Fonction pour passer au mode urgence depuis le mode panne
 def pass_to_emergency(failure_window):
     global val_panne, current_mode
     val_panne = True
@@ -78,6 +84,7 @@ def pass_to_emergency(failure_window):
     failure_window.withdraw()
     open_urgence_window(failure_window)
 
+# Fonction pour ouvrir la fenêtre du mode urgence
 def open_urgence_window(failure_window):
     global current_mode, current_window
     if failure_window:
@@ -100,6 +107,7 @@ def open_urgence_window(failure_window):
                            command=lambda: publish_command2(emergency_window, failure_window))
     direction2.grid(row=0, column=1, padx=20, pady=20)
 
+# Fonction pour publier la commande d'urgence direction 1
 def publish_command1(emergency_window, failure_window):
     global val_panne, current_mode, current_window
     publish_urgence_command(client, "urgence_direction1")
@@ -122,6 +130,7 @@ def publish_command1(emergency_window, failure_window):
     urgence1_label.grid(row=4, column=0, columnspan=3, pady=20)
     root.after(5000, urgence1_label.destroy)
 
+# Fonction pour publier la commande d'urgence direction 2
 def publish_command2(emergency_window, failure_window):
     global val_panne, current_mode, current_window
     publish_urgence_command(client, "urgence_direction2")
@@ -144,6 +153,7 @@ def publish_command2(emergency_window, failure_window):
     urgence2_label.grid(row=4, column=0, columnspan=3, pady=20)
     root.after(5000, urgence2_label.destroy)
 
+# Fonction pour définir le mode actuel et gérer le timer en mode urgence
 def set_mode(mode, duration=None):
     global current_mode, previous_mode
     if current_mode != "Mode Urgence":
@@ -158,12 +168,14 @@ def set_mode(mode, duration=None):
         emergency_timer = threading.Timer(duration, lambda: set_mode(previous_mode))
         emergency_timer.start()
 
+# Fonction appelée lors de la fermeture de l'application
 def on_closing():
     global emergency_timer
     if emergency_timer:
         emergency_timer.cancel()
     root.quit()
 
+# Fonction pour traiter les commandes vocales reçues
 def process_voice_commands():
     global root
     while True:
@@ -199,24 +211,30 @@ def process_voice_commands():
             break
     root.after(100, process_voice_commands)
 
+# Fonction pour afficher les commandes vocales reçues
 def show_voice_command_label(command_text):
     global root
     voice_command_label = tk.Label(root, text=f"Voice Command: {command_text}", font=("Arial", 12))
     voice_command_label.grid(row=5, column=0, columnspan=3, pady=10)
     root.after(5000, voice_command_label.destroy)
 
+# Callback pour les commandes vocales
 def voice_command_callback(command):
     command_queue.put(command)
 
 if __name__ == "__main__":
+    # Démarrage du processus d'abonnement MQTT
     subscriber_process = multiprocessing.Process(target=run_subscriber)
     subscriber_process.start()
 
+    # Démarrage de la reconnaissance vocale
     voice_thread = start_voice_recognition(voice_command_callback)
 
+    # Configuration de l'interface graphique Tkinter
     root = tk.Tk()
     root.title("Gestion des Feux de Croisement")
 
+    # Création des boutons et labels
     status_label = tk.Label(root, text=f"Mode actuel : {current_mode}", font=("Arial", 14, "bold"))
     status_label.grid(row=0, column=0, columnspan=3, pady=20)
 
@@ -231,10 +249,12 @@ if __name__ == "__main__":
 
     root.after(100, process_voice_commands)
 
+    # Boucle principale de l'application
     try:
         root.protocol("WM_DELETE_WINDOW", on_closing)
         root.mainloop()
     finally:
+        # Nettoyage et fermeture des ressources
         client.loop_stop()
         client.disconnect()
         subscriber_process.terminate()

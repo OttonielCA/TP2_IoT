@@ -11,12 +11,16 @@ def publish_vocal_command(command):
     client.publish("commande/vocale", command)
 
 def run_voice_recognition(callback):
+    # Configuration du modèle de reconnaissance vocale
     model = Model("vosk-model-small-fr-0.22")
     recognizer = KaldiRecognizer(model, 16000)
+
+    # Configuration de l'entrée audio
     p = pyaudio.PyAudio()
     stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
     stream.start_stream()
 
+    # Définition des mots-clés pour les différents modes
     mot_cles_activation = ["mode normal", "mode passage", "mode panne", "mode urgence"]
     mot_cles_urgence = ["Direction numéro un", "Direction numéro deux"]
     mot_cles_panne = ["Sortir du mode panne", "mode urgence"]
@@ -25,6 +29,7 @@ def run_voice_recognition(callback):
 
     try:
         while True:
+            # Lecture et traitement du flux audio
             data = stream.read(4000, exception_on_overflow=False)
             if len(data) == 0:
                 break
@@ -32,6 +37,7 @@ def run_voice_recognition(callback):
                 result = json.loads(recognizer.Result())
                 transcribed_text = result['text'].lower()
 
+                # Traitement des différentes commandes vocales
                 if transcribed_text == mot_cles_activation[0].lower():
                     print(f"{transcribed_text}: Mode Normal Allumé.")
                     callback("normal")
@@ -135,20 +141,24 @@ def run_voice_recognition(callback):
     except KeyboardInterrupt:
         print("Exiting...")
     finally:
+        # Nettoyage des ressources audio
         stream.stop_stream()
         stream.close()
         p.terminate()
 
+# Démarrage de la reconnaissance vocale dans un thread séparé
 def start_voice_recognition(callback):
     voice_thread = threading.Thread(target=run_voice_recognition, args=(callback,))
     voice_thread.start()
     return voice_thread
 
+# Arrêt du thread de reconnaissance vocale
 def stop_voice_recognition(voice_thread):
     if voice_thread and voice_thread.is_alive():
         voice_thread.join(timeout=1)
 
 if __name__ == "__main__":
+    # Code de test pour la reconnaissance vocale
     def test_callback(command):
         print(f"Callback received: {command}")
 

@@ -1,13 +1,16 @@
 import paho.mqtt.client as mqtt
 
-
+# Configuration du broker MQTT
 broker = "test.mosquitto.org"  # adresse du rboker mqtt
 port = 1883  # Port MQTT par défaut
 qos = 2  # Niveau de QoS
 
+# Définition des topics MQTT
 topic_pieton = "mode/pieton"
 topic_panne = "mode/panne"
 topic_urgence = "mode/urgence"
+
+# Fonctions pour publier des commandes sur différents topics
 def publish_pieton_command(client):
     client.publish(topic_pieton, "pieton_on")
     print("Commande 'pieton_on' envoyee a partir du PC.")
