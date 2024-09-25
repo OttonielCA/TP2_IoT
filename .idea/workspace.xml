@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2764cb9b-9489-4413-bfdf-77858f5f5621" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/commandeur_fonction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/commandeur_test_vosk.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordinateur/interface_publisher_tkinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_tkinter_MAIN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/publisher_vosk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ordinateur/subscriber_mqtt_PC.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ordinateur/subscriber_mqtt_PC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RaspberryPi/controleur_led_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/RaspberryPi/controleur_led_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RaspberryPi/interface_subscriber_tkinter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RaspberryPi/publisher_mqtt_RPi.py" beforeDir="false" afterPath="$PROJECT_DIR$/RaspberryPi/publisher_mqtt_RPi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Ex_3.executor": "Run",
-    "Python.commandeur_test_vosk.executor": "Run",
-    "Python.etst.executor": "Run",
-    "Python.exemple1-pyttsx3.executor": "Run",
-    "Python.interface_publisher_tkinter.executor": "Run",
-    "Python.publisher_tkinter_MAIN (1).executor": "Run",
-    "Python.publisher_tkinter_main (1).executor": "Run",
-    "Python.publisher_vosk (1).executor": "Run",
-    "Python.subscriber_mqtt_PC.executor": "Run",
-    "Python.vosk_example_1.executor": "Run",
-    "Python.vosk_example_4.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Python/School/BLOC_3/BLOC_3_IoT/TP2_IoT/Ordinateur"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Ex_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.commandeur_test_vosk.executor&quot;: &quot;Run&quot;,
+    &quot;Python.etst.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exemple1-pyttsx3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.interface_publisher_tkinter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.publisher_tkinter_MAIN (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.publisher_tkinter_main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.publisher_vosk (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.subscriber_mqtt_PC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vosk_example_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vosk_example_4.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Python/School/BLOC_3/BLOC_3_IoT/TP2_IoT/Ordinateur&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Python\School\BLOC_3\BLOC_3_IoT\TP2_IoT\Ordinateur" />
